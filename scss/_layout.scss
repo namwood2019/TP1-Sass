@@ -1,0 +1,52 @@
+// Header
+#top-nav {
+  padding: 3rem 0;
+  .pull-left {
+    float: left;
+  }
+
+  .pull-right {
+    float: right;
+    padding-top: 2rem;
+  }
+}
+
+#main-nav {
+  display: flex;
+  // justify-content: space-between;
+  background: $dark-color;
+  color: #fff;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Footer
+#main-footer{
+  background: $dark-color;
+  color: $light-color;
+  height: 10rem;
+}

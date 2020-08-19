@@ -1,0 +1,25 @@
+// Variables
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$roboto: 'Roboto', sans-serif; //h1, h2
+$fonts: Doris, sans-serif;
+
+
+// Colors
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #cccccc;
+$dark-color: #333333;
+$bg-title: url('../img/showcase.jpg');
+$bg-card: url('../img/items/item1.jpg');
+
+
+// Set Text Color
+@function set-text-color($color) {
+  @if(lightness($color) > 50){
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

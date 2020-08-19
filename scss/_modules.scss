@@ -1,0 +1,142 @@
+// Section A
+#section {
+  &-a{
+    .page-title {
+      background: $bg-title no-repeat center right / cover;
+      height: 270px;
+      color: $main-color;
+      padding: 2rem;
+
+      h1, h2{
+        font-family: $roboto;
+        position: relative;
+        top: 10rem;
+      }
+    }
+  }
+}
+
+// Section B
+#section {
+  &-b{
+    .row{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .col-left {
+        margin-right: 0.5rem;
+        .card{
+          &-1{
+            .block-1{
+              display: flex;
+              justify-content: center;
+              background: #999999;
+    
+              ul{
+                display: flex;
+              }
+            
+              li{
+                padding: 1rem;
+              }
+            }
+          }
+
+          &-3{
+            h4{
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      .col-right {
+        margin-left: 0.5rem;
+        .card{
+          &-4{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          
+            .block-left {
+              margin-right: 1rem;
+              .bourse{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+
+            .block-right {
+              margin-left: 1rem;
+              .meteo{
+                background: #999999;
+                height: 135px;
+                margin: 0 1rem;
+              }
+            }  
+          }
+
+          &-5 {
+            .block-1 {
+              background: $bg-card no-repeat center right / cover;
+              height: 270px;
+
+              h4{
+                position: relative;
+                top: 10rem;
+                color: $main-color;
+                text-align: left;
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 2rem;
+              }
+            }
+
+            .block-3 {
+              text-align: left;
+            }
+          }
+        }
+      } // End col-right
+    }
+  }
+}
+
+// Section C
+#section {
+  &-c{
+    .row{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      
+      .col-left {
+        min-height: 360px;
+        margin-right: 1rem;
+        padding: 1.8rem 0;
+      }
+
+      .col-right {
+        padding: 1.8rem 0;
+      }
+
+      .text-fields{
+        display: grid;
+        grid-template-areas: 
+          'fname'
+          'lname'
+          'email';
+
+        grid-gap: 1.8rem;
+        padding: 3rem;
+        // margin-left: 1rem;
+        margin-bottom: 1.2rem;
+  
+        // Grid Areas
+        .lname-input {grid-area: lname; }
+        .fname-input {grid-area: fname; }
+        .email-input {grid-area: email; }
+        .text-input{padding: 0.5rem 1rem;}
+      }
+  
+      button[type='submit']{width: 45%;}
+    }
+  }
+}
